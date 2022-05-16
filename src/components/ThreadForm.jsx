@@ -11,9 +11,9 @@ function ThreadForm() {
         let xhr = new XMLHttpRequest();
 
         xhr.onreadystatechange = function () {
-            if (this.readyState != 4) return;
+            if (this.readyState !== 4) return;
 
-            if (this.status == 201) {
+            if (this.status === 201) {
                 var response = JSON.parse(this.responseText)
                 var newPath = `/thread/${response.id}/`
                 navigate(newPath)

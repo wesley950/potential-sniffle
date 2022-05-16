@@ -1,15 +1,19 @@
 import React from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
 import { commentThread } from "../functions/ThreadFunctions";
+import { addComment } from "../redux/action";
 
-function CommentForm({ threadID, onceCommented }) {
-    const location = useLocation()
-    const navigation = useNavigate()
+function CommentForm({ threadID }) {
+    const dispatch = useDispatch()
 
     const submitClicked = () => {
         let textInput = document.getElementById("comment-text")
         commentThread(threadID, textInput.value, () => {
-            onceCommented()
+            dispatch(addComment({
+                text: textInput.value,
+                points: 0
+            }))
+            textInput.value = ""
         })
     }
 

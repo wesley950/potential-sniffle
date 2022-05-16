@@ -3,9 +3,9 @@ function likeThread(threadID, onceDone) {
     var xhr = new XMLHttpRequest()
 
     xhr.onreadystatechange = function () {
-        if (this.readyState != 4) return;
+        if (this.readyState !== 4) return;
 
-        if (this.status == 200) {
+        if (this.status === 200) {
             onceDone()
         }
     }
@@ -19,9 +19,9 @@ function commentThread(threadID, comment, onceDone) {
     var xhr = new XMLHttpRequest()
 
     xhr.onreadystatechange = function () {
-        if (this.readyState != 4) return;
+        if (this.readyState !== 4) return;
 
-        if (this.status == 200) {
+        if (this.status === 201) {
             onceDone()
         }
     }
