@@ -8,8 +8,9 @@ function CommentForm({ threadID }) {
 
     const submitClicked = () => {
         let textInput = document.getElementById("comment-text")
-        commentThread(threadID, textInput.value, () => {
+        commentThread(threadID, textInput.value, (comment) => {
             dispatch(addComment({
+                id: comment.id,
                 text: textInput.value,
                 points: 0
             }))

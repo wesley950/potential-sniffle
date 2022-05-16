@@ -22,7 +22,8 @@ function commentThread(threadID, comment, onceDone) {
         if (this.readyState !== 4) return;
 
         if (this.status === 201) {
-            onceDone()
+            var data = JSON.parse(this.responseText)
+            onceDone(data)
         }
     }
 

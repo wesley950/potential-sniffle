@@ -6,7 +6,8 @@ function likeComment(commentID, onceDone) {
         if (this.readyState !== 4) return;
 
         if (this.status === 200) {
-            onceDone()
+            var data = JSON.parse(this.responseText)
+            onceDone(data)
         }
     }
 
