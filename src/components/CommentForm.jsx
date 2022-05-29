@@ -20,8 +20,8 @@ function CommentForm({ threadID }) {
 
     return (
         <div className="mt-3 mb-3">
-            <textarea className="form-control mb-2" id="comment-text" cols="30" rows="10" placeholder="Faça um comentário..."></textarea>
-            <button className="btn btn-primary" onClick={submitClicked}>Enviar</button>
+            <textarea className="form-control mb-2" id="comment-text" cols="30" rows="10" placeholder="Type something..."></textarea>
+            <button className="btn btn-primary" onClick={submitClicked}>Submit</button>
         </div>
     )
 }

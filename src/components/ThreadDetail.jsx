@@ -43,9 +43,9 @@ function ThreadDetail() {
             <h2>{thread.title}</h2>
             <div>{thread.description}</div>
 
-            <div>{points} curtidas</div>
-            <button className="btn btn-primary btn-sm" onClick={likeClicked}>Curtir</button>
-            <div>{globalState.comments.length} comentários</div>
+            <div>{points} likes</div>
+            <button className="btn btn-primary btn-sm" onClick={likeClicked}>Like</button>
+            <div>{globalState.comments.length} comments</div>
 
             <CommentForm threadID={id} />
 

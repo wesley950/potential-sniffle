@@ -15,8 +15,8 @@ function Comment({ id, text, likes }) {
             <div className="col">
 
                 <div className="text-muted">{text}</div>
-                <strong className="me-3">{displayLikes} curtidas</strong>
-                <button className="btn btn-primary btn-sm" onClick={likeClicked}>Curtir</button>
+                <strong className="me-3">{displayLikes} points</strong>
+                <button className="btn btn-primary btn-sm" onClick={likeClicked}>Like</button>
             </div>
         </div>
     );

@@ -21,11 +21,11 @@ function Thread({ id, title, text, likes, comment_count }) {
             <div>{text}</div>
 
             <div>
-                <div>{displayedLikes} curtidas</div>
-                <div>{comment_count} comentários</div>
+                <div>{displayedLikes} likes</div>
+                <div>{comment_count} comments</div>
             </div>
 
-            <button className="btn btn-primary btn-sm" onClick={likeClicked}>Curtir</button>
+            <button className="btn btn-primary btn-sm" onClick={likeClicked}>Like</button>
         </div>
     );
 }

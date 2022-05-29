@@ -19,7 +19,7 @@ function New() {
     return (
         <div>
             <div className="container">
-                <h1>Recentes</h1>
+                <h1>Recent</h1>
 
                 <ThreadList threads={threads} />
             </div>

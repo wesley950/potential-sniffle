@@ -19,7 +19,7 @@ function Trending() {
     return (
         <div>
             <div className="container">
-                <h1>Populares</h1>
+                <h1>Trending</h1>
 
                 <ThreadList threads={threads} />
             </div>

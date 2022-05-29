@@ -7,17 +7,17 @@ function Nav() {
             <ul className="nav justify-content-center">
                 <li className="nav-item">
                     <Link style={{ textDecoration: "none" }} to="/">
-                        <div className="nav-link">Página Inicial</div>
+                        <div className="nav-link">Home</div>
                     </Link>
                 </li>
                 <li className="nav-item">
                     <Link style={{ textDecoration: "none" }} to="/trending/">
-                        <div className="nav-link">Populares</div>
+                        <div className="nav-link">Trending</div>
                     </Link>
                 </li>
                 <li className="nav-item">
                     <Link style={{ textDecoration: "none" }} to="/new/">
-                        <div className="nav-link">Recentes</div>
+                        <div className="nav-link">Recent</div>
                     </Link>
                 </li>
             </ul>

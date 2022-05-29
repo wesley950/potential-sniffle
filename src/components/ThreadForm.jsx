@@ -30,10 +30,10 @@ function ThreadForm() {
 
     return (
         <div className="mt-3">
-            <h3>Faça a sua própria postagem</h3>
-            <input type="text" id="thread-title" className="form-control mb-2" placeholder="Título (requerido)" />
-            <textarea className="form-control mb-2" id="thread-text" cols="30" rows="10" placeholder="Mensagem (opcional)"></textarea>
-            <button className="btn btn-primary" onClick={submitThread}>Enviar</button>
+            <h3>Start your own thread</h3>
+            <input type="text" id="thread-title" className="form-control mb-2" placeholder="Title (required)" />
+            <textarea className="form-control mb-2" id="thread-text" cols="30" rows="10" placeholder="Message (optional)"></textarea>
+            <button className="btn btn-primary" onClick={submitThread}>Submit</button>
         </div>
     )
 }
