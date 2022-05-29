@@ -1,3 +1,4 @@
+import { Container, Heading } from "@chakra-ui/react";
 import React from "react";
 import { useState, useEffect } from "react";
 
@@ -17,13 +18,10 @@ function New() {
     }, [])
 
     return (
-        <div>
-            <div className="container">
-                <h1>Recent</h1>
-
-                <ThreadList threads={threads} />
-            </div>
-        </div>
+        <Container>
+            <Heading>Recent</Heading>
+            <ThreadList threads={threads} />
+        </Container>
     );
 }
 

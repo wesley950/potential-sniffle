@@ -1,3 +1,4 @@
+import { Container, Heading } from "@chakra-ui/react";
 import React from "react";
 import { useState, useEffect } from "react";
 
@@ -17,13 +18,10 @@ function Trending() {
     }, [])
 
     return (
-        <div>
-            <div className="container">
-                <h1>Trending</h1>
-
-                <ThreadList threads={threads} />
-            </div>
-        </div>
+        <Container>
+            <Heading>Trending</Heading>
+            <ThreadList threads={threads} />
+        </Container>
     );
 }
 

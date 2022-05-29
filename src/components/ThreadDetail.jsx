@@ -7,6 +7,7 @@ import CommentForm from "./CommentForm";
 import { likeThread } from "../functions/ThreadFunctions";
 import { useDispatch, useSelector } from "react-redux";
 import { addComment, setComments } from "../redux/action";
+import { Button, Container, Heading, HStack, Text, VStack } from "@chakra-ui/react";
 
 function ThreadDetail() {
     const { threadID } = useParams();
@@ -38,19 +39,24 @@ function ThreadDetail() {
     }, [])
 
     return (
-        <div className="container">
-            <div className="text-muted">Thread {threadID}</div>
-            <h2>{thread.title}</h2>
-            <div>{thread.description}</div>
+        <Container>
+            <VStack spacing='12px'>
+                <Text color='gray.500' fontWeight='bold' fontSize='sm'>Thread {threadID}</Text>
+                <Heading as='h2'>{thread.title}</Heading>
+                <Text>{thread.description}</Text>
 
-            <div>{points} likes</div>
-            <button className="btn btn-primary btn-sm" onClick={likeClicked}>Like</button>
-            <div>{globalState.comments.length} comments</div>
+                <VStack spacing='24px'>
+                    <HStack spacing='24px'>
+                        <Button onClick={likeClicked} colorScheme='teal' size='sm'>Like</Button>
+                        <Text color='teal.300'>{points} likes</Text>
+                        <Text color='teal.300'>{globalState.comments.length} comments</Text>
+                    </HStack>
 
-            <CommentForm threadID={id} />
-
-            <CommentList comments={globalState.comments} />
-        </div>
+                    <CommentForm threadID={id} />
+                    <CommentList comments={globalState.comments} />
+                </VStack>
+            </VStack>
+        </Container>
     )
 }
 

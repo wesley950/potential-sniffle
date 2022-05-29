@@ -1,27 +1,33 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link as ReachLink } from "react-router-dom";
+
+import {
+    Center,
+
+    Breadcrumb,
+    BreadcrumbItem,
+    Link,
+
+} from '@chakra-ui/react'
+import { ExternalLinkIcon } from "@chakra-ui/icons";
 
 function Nav() {
     return (
-        <div>
-            <ul className="nav justify-content-center">
-                <li className="nav-item">
-                    <Link style={{ textDecoration: "none" }} to="/">
-                        <div className="nav-link">Home</div>
-                    </Link>
-                </li>
-                <li className="nav-item">
-                    <Link style={{ textDecoration: "none" }} to="/trending/">
-                        <div className="nav-link">Trending</div>
-                    </Link>
-                </li>
-                <li className="nav-item">
-                    <Link style={{ textDecoration: "none" }} to="/new/">
-                        <div className="nav-link">Recent</div>
-                    </Link>
-                </li>
-            </ul>
-        </div>
+        <Center>
+            <Breadcrumb fontWeight='medium' fontSize='large' separator=''>
+                <BreadcrumbItem>
+                    <Link color='teal.500' to="/" as={ReachLink}>Home <ExternalLinkIcon mx='2px' /></Link>
+                </BreadcrumbItem>
+
+                <BreadcrumbItem>
+                    <Link color='teal.500' to="/trending/" as={ReachLink}>Trending <ExternalLinkIcon mx='2px' /></Link>
+                </BreadcrumbItem>
+
+                <BreadcrumbItem>
+                    <Link color='teal.500' to="/new/" as={ReachLink}>Recent <ExternalLinkIcon mx='2px' /></Link>
+                </BreadcrumbItem>
+            </Breadcrumb>
+        </Center>
     );
 }
 

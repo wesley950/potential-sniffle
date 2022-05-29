@@ -1,3 +1,4 @@
+import { Button, HStack, Text } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { likeComment } from "../functions/CommentFunctions";
 
@@ -11,13 +12,12 @@ function Comment({ id, text, likes }) {
     }
 
     return (
-        <div className="list-group-item">
-            <div className="col">
-
-                <div className="text-muted">{text}</div>
-                <strong className="me-3">{displayLikes} points</strong>
-                <button className="btn btn-primary btn-sm" onClick={likeClicked}>Like</button>
-            </div>
+        <div>
+            <Text color='gray.500'>{text}</Text>
+            <HStack spacing='24px'>
+                <Button onClick={likeClicked} colorScheme='teal' size='xs'>Like</Button>
+                <Text color='teal.300'>{displayLikes} likes</Text>
+            </HStack>
         </div>
     );
 }

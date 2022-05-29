@@ -1,6 +1,14 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
+import { 
+    FormLabel,
+    Button,
+    Input,
+    Textarea,
+    VStack
+} from '@chakra-ui/react'
+
 function ThreadForm() {
     const navigate = useNavigate()
 
@@ -29,12 +37,12 @@ function ThreadForm() {
     }
 
     return (
-        <div className="mt-3">
-            <h3>Start your own thread</h3>
-            <input type="text" id="thread-title" className="form-control mb-2" placeholder="Title (required)" />
-            <textarea className="form-control mb-2" id="thread-text" cols="30" rows="10" placeholder="Message (optional)"></textarea>
-            <button className="btn btn-primary" onClick={submitThread}>Submit</button>
-        </div>
+        <VStack>
+            <FormLabel>Start your own thread</FormLabel>
+            <Input placeholder="Title (required)" id="thread-title" />
+            <Textarea placeholder="Message (optional)" id="thread-text" />
+            <Button colorScheme='green' onClick={submitThread}>Submit</Button>
+        </VStack>
     )
 }
 

@@ -1,13 +1,19 @@
 import React from "react";
 import ThreadForm from "./ThreadForm";
 
+import {
+    Heading,
+
+    Container
+} from '@chakra-ui/react'
+
 function Home() {
     return (
-        <div className="container">
-            <h1>Home Page</h1>
+        <Container>
+            <Heading as='h1'>Home</Heading>
 
             <ThreadForm />
-        </div>
+        </Container>
     );
 }
 

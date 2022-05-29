@@ -1,3 +1,4 @@
+import { Button, Container, FormControl, FormLabel, Textarea, VStack } from "@chakra-ui/react";
 import React from "react";
 import { useDispatch } from "react-redux";
 import { commentThread } from "../functions/ThreadFunctions";
@@ -19,10 +20,17 @@ function CommentForm({ threadID }) {
     }
 
     return (
-        <div className="mt-3 mb-3">
-            <textarea className="form-control mb-2" id="comment-text" cols="30" rows="10" placeholder="Type something..."></textarea>
-            <button className="btn btn-primary" onClick={submitClicked}>Submit</button>
-        </div>
+        <Container>
+            <VStack spacing='8px'>
+
+                <FormControl>
+                    <FormLabel>Comment</FormLabel>
+                    <Textarea id='comment-text'></Textarea>
+                </FormControl>
+
+                <Button onClick={submitClicked}>Submit</Button>
+            </VStack>
+        </Container>
     )
 }
 

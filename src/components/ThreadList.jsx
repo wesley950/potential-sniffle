@@ -1,20 +1,19 @@
+import { Container, StackDivider, VStack } from "@chakra-ui/react";
 import React from "react";
 
 import Thread from "./Thread";
 
 function ThreadList({ threads }) {
     return (
-        <div>
-            <ul className="list-group">
+        <Container>
+            <VStack divider={<StackDivider borderColor='gray.200' />} spacing={4} align='stretch'>
                 {
                     threads.map(thread => (
-                        <li className="list-group-item">
-                            <Thread id={thread.id} title={thread.title} text={thread.description} likes={thread.points} comment_count={thread.comments.length} />
-                        </li>
+                        <Thread id={thread.id} title={thread.title} text={thread.description} likes={thread.points} comment_count={thread.comments.length} />
                     ))
                 }
-            </ul>
-        </div>
+            </VStack>
+        </Container>
     );
 }
 
